@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Share your ideas with all!">
         <link rel="icon" type="image/x-icon" href="./assets/images/HoI_Favicon.png">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,17 +33,24 @@
         </header>
         
         <main class="site-main flex">
+            <div class="error-form hide">
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <h3>You forgot some fields!</h3>
+            </div>
+
             <div class="landing flex">
                 <section class="banner">
                     <i id="logo-main" class="fa-regular fa-head-side-brain"></i>
                     <h1>The Hall of <span>Ideas</span></h1>
                 </section>
+
                 <section class="new-post flex">
                     <h2 class="quote">Share your thoughts...</h2>
                     <button id="new-post-btn" class="btn">New post</button>
                     <button id="goto-btn" class="btn">Go to feed</button>
                 </section>
             </div>
+
             <div class="new-post-form hide">
                 <button id="return-btn" class="btn">← Return </button>
                 <div class="input-div input-user-div flex"><h3>Username</h3><input name="user" class="post-input" id="user-input" type="text" maxlength="20"></div>
