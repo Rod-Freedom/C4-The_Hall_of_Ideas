@@ -12,16 +12,17 @@
         <script src="https://kit.fontawesome.com/dd3f6d2eee.js" crossorigin="anonymous"></script>
         <script defer src="./assets/js/logic.js"></script>
         <script defer src="./assets/js/form.js"></script>
+        <title>The Hall of Ideas | Share your toughts</title>
     </head>
 
     <body class="flex">
-        <header class="flex">
+        <header class="full-header flex">
             <div class="disclaimer">
                 <p>THIS SITE IS FOR EDUCATIONAL PURPOSES ONLY | FIND THE REPO <span class="repo"><a href="https://github.com/Rod-Freedom/C4-The_Hall_of_Ideas" target="_blank">HERE</a></span>.</p>
             </div>
 
             <section class="main-header main-color flex">
-                <div class="brand hidden flex">
+                <div id="brand" class="brand hidden hide">
                     <i id="logo" class="fa-regular fa-head-side-brain"></i>
                     <h1>The Hall of <span>Ideas</span></h1>
                 </div>
@@ -30,28 +31,28 @@
             </section>
         </header>
         
-        <main class="flex">
+        <main class="site-main flex">
             <div class="landing flex">
                 <section class="banner">
                     <i id="logo-main" class="fa-regular fa-head-side-brain"></i>
                     <h1>The Hall of <span>Ideas</span></h1>
                 </section>
                 <section class="new-post flex">
-                    <h2 class="quote">Share your thoughs...</h2>
+                    <h2 class="quote">Share your thoughts...</h2>
                     <button id="new-post-btn" class="btn">New post</button>
                     <button id="goto-btn" class="btn">Go to feed</button>
                 </section>
             </div>
-            <form action="" class="new-post-form hide">
+            <div class="new-post-form hide">
                 <button id="return-btn" class="btn">← Return </button>
                 <div class="input-div input-user-div flex"><h3>Username</h3><input name="user" class="post-input" id="user-input" type="text" maxlength="20"></div>
                 <div class="input-div input-title-div flex"><h3>Title</h3><input name="title" class="post-input" id="title-input" type="text" maxlength="40"></div>
                 <div class="input-div input-cont-div flex"><h3>Content</h3><textarea name="content" class="post-input" id="content-input" type="text" maxlength="500" rows="10"></textarea></div>
                 <button id="post-btn" class="btn">Post now</button>
-            </form>
+            </div>
         </main>
 
-        <footer class="flex">
+        <footer class="main-footer flex">
             <p>MADE BY <span><a href="https://github.com/Rod-Freedom" target="_blank">ROD</a></span> WITH CARE AND DEDICATION.</p>
         </footer>
     </body>

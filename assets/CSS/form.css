@@ -4,7 +4,7 @@
     --btn-color-hover-light: rgb(210, 24, 55);
 }
 
-main {
+.site-main {
     width: 90%;
     flex-grow: 1;
     flex-direction: column;

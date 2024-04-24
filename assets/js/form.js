@@ -13,20 +13,22 @@ const contInput = document.querySelector('#content-input');
 let posts = [];
 
 const getData = () => {
-    if (localStorage.getItem('posts')) posts = JSON.parse(localStorage.getItem('posts'));
+    if (localStorage.getItem('savedPosts')) posts = JSON.parse(localStorage.getItem('savedPosts'));
 };
 
 const storeData = () => {
     localStorage.setItem('savedPosts', JSON.stringify(posts));
 };
 
-
 const newPostFunc = () => {
-    brandEL.classList.remove('hidden');
+    brandEL.classList.remove('hide');
+    brandEL.classList.add('flex');
+    brandEL.classList.add('pointer');
     landingDiv.classList.remove('flex');
     landingDiv.classList.add('hide');
     newPostForm.classList.remove('hide');
     newPostForm.classList.add('grid');
+    setTimeout(() => brandEL.classList.remove('hidden'), 100);
 };
 
 const postFunc = (e) => {
@@ -43,20 +45,28 @@ const postFunc = (e) => {
     
     posts.push(post);
     storeData();
-
-    setTimeout(() => window.location.href = 'blog.js', 1000);
+    
+    setTimeout(() => window.location.href = 'blog.html', 1000);
 };
 
-const gotoFunc = () => window.location.href = 'blog.js';
-
+const gotoFunc = () => window.location.href = 'blog.html';
+    
 const returnFunc = (e) => {
     e.preventDefault();
-
+    
     brandEL.classList.add('hidden');
     landingDiv.classList.add('flex');
     landingDiv.classList.remove('hide');
     newPostForm.classList.add('hide');
     newPostForm.classList.remove('grid');
+    setTimeout(() => {
+        brandEL.classList.add('hide');
+        brandEL.classList.remove('flex');
+    }, 1000);
+    
+    userInput.value = '';
+    titleInput.value = '';
+    contInput.value = '';
 };
     
 const readyLandFunc = () => {
@@ -65,7 +75,6 @@ const readyLandFunc = () => {
     returnBtn.addEventListener('click', returnFunc);
     gotoBtn.addEventListener('click', gotoFunc);
     getData();
-
 };
 
 window.onload = readyLandFunc();

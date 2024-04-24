@@ -2,6 +2,7 @@ const modeBtn = document.querySelector('#mode-btn');
 const modeText = document.querySelector('.mode-text');
 const rootEl = document.querySelector(':root');
 const modeIcon = document.querySelector('#mode-icon');
+const brand = document.querySelector('#brand');
 let prefMode = '';
 
 // The following func will save the "color-scheme" preference of the user in the local storage, and it'll be called every time the user changes mode.
@@ -95,6 +96,7 @@ const changeMode = () => {
 
 const readyFunc = () => {
     modeBtn.addEventListener('click', changeMode);
+    brand.addEventListener('click', () => window.location.href = 'index.html');
     detectMode();
 
     // An event that listens for changes in the user's preferences.
