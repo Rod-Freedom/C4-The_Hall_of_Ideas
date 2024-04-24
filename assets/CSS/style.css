@@ -1,0 +1,188 @@
+:root {
+    --main-font: "Ubuntu", sans-serif;
+    --focus-color: rgb(254, 64, 96);
+    --btn-color: rgb(254, 64, 96);
+    --main-border-values: solid .5px;
+    --main-border-color: rgb(127, 127, 127);
+
+    /* ---------------------------------------- */
+    
+    --font-color-inverted: rgb(60, 60, 60);
+    --btn-color-sec-hover: rgb(150, 150, 150);
+    --btn-color-sec: rgb(178, 178, 178);
+    --body-bg: rgb(23, 23, 23);
+    --hover-btn-bg: rgb(255, 255, 255, 0.3);
+    --main-font-color: rgb(208, 208, 208);
+    --highlight-font-color: rgb(255, 255, 255);
+    
+    /* ---------------------------------------- */
+    
+    --font-color-inverted-light: rgb(217, 217, 217);
+    --btn-color-sec-hover-light: rgb(129, 129, 129);
+    --btn-color-sec-light: rgb(116, 116, 116);
+    --btn-color-sec-light: rgb(76, 76, 76);
+    --hover-btn-bg-light: rgb(0, 0, 0, 0.3);
+    --body-bg-light: white;
+    --main-font-color-light: rgb(46, 46, 46);
+    --highlight-font-color-light: rgb(0, 0, 0);
+}
+
+* {
+    font-family: var(--main-font);
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.grid {
+    display: grid;
+}
+
+.hide {
+    display: none;
+}
+
+.hidden {
+    opacity: 0%;
+    transition: 200ms;
+}
+
+.main-color {
+    color: var(--main-font-color);
+}
+
+body {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--body-bg);
+    width: 100%;
+    min-height: 100vh;
+}
+
+header {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.disclaimer {
+    background-color: black;
+    color: white;
+    font-weight: 100;
+    font-size: .9rem;
+    width: 100%;
+    text-align: center;
+    word-spacing: .2vw;
+    padding: .3vh 0;
+}
+
+.repo a {
+    color: white;
+    font-weight: 500;
+}
+
+.repo:hover {
+    text-decoration: underline;
+}
+
+.main-header {
+    justify-content: space-between;
+    align-items: center;
+    padding: 3vh 3vw 5vh;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: var(--main-border-values) var(--main-border-color);
+}
+
+.brand {
+    flex-direction: row;
+    align-items: center;
+    transition: 1s;
+}
+
+#logo {
+    font-size: 2.5rem;
+    margin-right: .5vw;
+    color: var(--highlight-font-color);
+}
+
+.brand h1 {
+    font-size: 2rem;
+    font-weight: 200;
+}
+
+.brand h1 span {
+    font-weight: 500;
+    color: var(--highlight-font-color);
+}
+
+#mode-btn {
+    flex-direction: row;
+    align-items: center;
+    height: fit-content;
+    margin-right: 2vw;
+    border: none;
+    border-radius: .5vh;
+    background: none;
+    padding: .5vh .6vw;
+}
+
+.mode-text {
+    font-size: 1.1rem;
+    font-weight: 200;
+    padding-right: 1vw;
+    color: var(--main-font-color);
+}
+
+.fa-lightbulb {
+    font-size: 1.5rem;
+    margin: 0;
+    color: var(--highlight-font-color);
+}
+
+#mode-btn:hover {
+    background-color: var(--hover-btn-bg);
+    transition: 200ms;
+}
+
+#mode-btn:hover .mode-text {
+    opacity: 100%;
+}
+
+.btn {
+    border: none;
+    padding: 1vh 5vw;
+    font-size: 1.2rem;
+    border-radius: 5vh;
+    font-weight: 500;
+    margin-top: 2vh;
+    text-wrap: nowrap;
+    text-align: center;
+}
+
+footer {
+    justify-content: center;
+    font-weight: 200;
+    padding: 3vh 0 5vh;
+    font-family: var(--infoFont);
+    font-size: 1.2rem;
+    color: var(--main-font-color);
+    border-top: var(--main-border-values) var(--main-border-color);
+    box-sizing: border-box;
+    width: 100%;
+}
+
+footer a {
+    color: var(--main-font-color);
+    font-weight: 600;
+}
+
+footer a:hover {
+    color: var(--highlight-font-color);
+}
