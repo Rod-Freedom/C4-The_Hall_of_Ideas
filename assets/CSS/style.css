@@ -52,6 +52,10 @@
     transition: 200ms;
 }
 
+.pointer {
+    cursor: pointer;
+}
+
 .main-color {
     color: var(--main-font-color);
 }
@@ -65,7 +69,7 @@ body {
     min-height: 100vh;
 }
 
-header {
+.full-header {
     flex-direction: column;
     align-items: center;
     width: 100%;
@@ -92,9 +96,10 @@ header {
 }
 
 .main-header {
-    justify-content: space-between;
+    justify-content: end;
     align-items: center;
     padding: 3vh 3vw 5vh;
+    height: calc(40px + 8vh);
     width: 100%;
     box-sizing: border-box;
     border-bottom: var(--main-border-values) var(--main-border-color);
@@ -104,6 +109,7 @@ header {
     flex-direction: row;
     align-items: center;
     transition: 1s;
+    flex-grow: 1;
 }
 
 #logo {
@@ -166,7 +172,7 @@ header {
     text-align: center;
 }
 
-footer {
+.main-footer {
     justify-content: center;
     font-weight: 200;
     padding: 3vh 0 5vh;
@@ -176,13 +182,14 @@ footer {
     border-top: var(--main-border-values) var(--main-border-color);
     box-sizing: border-box;
     width: 100%;
+    text-align: center;
 }
 
-footer a {
+.main-footer a {
     color: var(--main-font-color);
     font-weight: 600;
 }
 
-footer a:hover {
+.main-footer a:hover {
     color: var(--highlight-font-color);
 }
