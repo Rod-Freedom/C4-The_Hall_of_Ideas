@@ -1,10 +1,5 @@
-:root {
-    --btn-color-hover: rgb(255, 97, 124);
-    
-    --btn-color-hover-light: rgb(210, 24, 55);
-}
-
 .site-main {
+    position: relative;
     width: 90%;
     flex-grow: 1;
     flex-direction: column;
@@ -162,4 +157,25 @@
     color: var(--focus-color);
     font-size: 1.1rem;
     align-items: start;
+}
+
+.error-form {
+    background-color: rgb(0, 0, 0, .5);
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2vh 1.5vw;
+    border-radius: .5rem;
+    transition: 1s;
+}
+
+.error-form h3 {
+    font-weight: 300;
+}
+
+.error-form i {
+    color: rgb(254, 217, 54);
+    font-size: 3rem;
+    margin-bottom: 2vh;
 }

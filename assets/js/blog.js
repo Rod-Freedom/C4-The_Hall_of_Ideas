@@ -2,10 +2,12 @@ const returnBtn = document.querySelector('#return-btn');
 const postsSection = document.querySelector('.posts');
 const errorDiv = document.querySelector('.error-div');
 
-
+// An array to store the retrieved dato from the local storage.
 let posts = [];
 
+// A function to look for data in the local storage.
 const getData = () => {
+    // If the local storage is empty, the noPostFunction will display a message.
     if (localStorage.getItem('savedPosts')) {
         posts = JSON.parse(localStorage.getItem('savedPosts'));
         posts.forEach(renderPosts);
@@ -13,12 +15,15 @@ const getData = () => {
     else return noPostsFunc()
 };
 
+// If there aren't posts to dismplay, this function will display a message in the main element.
 const noPostsFunc = () => {
     errorDiv.classList.add('flex');
     errorDiv.classList.remove('hide');
-}
+};
 
+// The following function will make all the necesary changes in the DOM to display each post.
 const renderPosts = (post) => {
+    // Each post consists of three elements: header (<h3>), main (<p>), and footer (<p>). All into an <article> type.
     const postEl = document.createElement('article');
     const postHeadEl = document.createElement('h3');
     const postMainEl = document.createElement('p');
@@ -43,12 +48,13 @@ const renderPosts = (post) => {
     postEl.appendChild(postFootEl);
 }
 
+// A function called each time the user hits the return button.
 const returnFunc = () => window.location.href = 'index.html';
 
+// A func. on load, to activate all the event listeners and retrieve the data from the local storage.
 const readyBlogFunc = () => {
     getData();
     returnBtn.addEventListener('click', returnFunc);
-    console.log(posts);
 };
 
 window.onload = readyBlogFunc();

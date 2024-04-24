@@ -1,32 +1,13 @@
+/* These are only the unchanged variables, the rest are set by the script depending on if it's dark or light mode */
 :root {
     --main-font: "Ubuntu", sans-serif;
     --focus-color: rgb(254, 64, 96);
     --btn-color: rgb(254, 64, 96);
     --main-border-values: solid .5px;
     --main-border-color: rgb(127, 127, 127);
-
-    /* ---------------------------------------- */
-    
-    --font-color-inverted: rgb(60, 60, 60);
-    --btn-color-sec-hover: rgb(150, 150, 150);
-    --btn-color-sec: rgb(178, 178, 178);
-    --body-bg: rgb(23, 23, 23);
-    --hover-btn-bg: rgb(255, 255, 255, 0.3);
-    --main-font-color: rgb(208, 208, 208);
-    --highlight-font-color: rgb(255, 255, 255);
-    
-    /* ---------------------------------------- */
-    
-    --font-color-inverted-light: rgb(217, 217, 217);
-    --btn-color-sec-hover-light: rgb(129, 129, 129);
-    --btn-color-sec-light: rgb(116, 116, 116);
-    --btn-color-sec-light: rgb(76, 76, 76);
-    --hover-btn-bg-light: rgb(0, 0, 0, 0.3);
-    --body-bg-light: white;
-    --main-font-color-light: rgb(46, 46, 46);
-    --highlight-font-color-light: rgb(0, 0, 0);
 }
 
+/* Some default values. */
 * {
     font-family: var(--main-font);
     margin: 0;
@@ -35,6 +16,7 @@
     list-style: none;
 }
 
+/* These selectors are for easily removing elements from the display by just changing the elements' classes. */
 .flex {
     display: flex;
 }
@@ -109,7 +91,6 @@ body {
     flex-direction: row;
     align-items: center;
     transition: 1s;
-    flex-grow: 1;
 }
 
 #logo {
@@ -133,6 +114,7 @@ body {
     align-items: center;
     height: fit-content;
     margin-right: 2vw;
+    margin-left: auto;
     border: none;
     border-radius: .5vh;
     background: none;
