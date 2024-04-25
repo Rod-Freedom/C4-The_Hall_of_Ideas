@@ -16,16 +16,17 @@
 
 .banner {
     transition: 200ms;
+    padding-bottom: 5vh;
 }
 
 #logo-main {
-    font-size: 20vh;
+    font-size: calc(8rem + 6vw);
     margin-right: .5vw;
     color: var(--highlight-font-color);
 }
 
 .banner h1 {
-    font-size: 5rem;
+    font-size: calc(3rem + 2vw);
     font-weight: 200;
     color: var(--main-font-color);
 }
@@ -37,6 +38,7 @@
 
 .new-post {
     flex-direction: column;
+    padding-top: 3vh;
 }
 
 .quote {
